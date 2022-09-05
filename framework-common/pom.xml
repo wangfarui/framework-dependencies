@@ -12,4 +12,11 @@
     <artifactId>framework-common</artifactId>
     <description>内部项目的公共模块</description>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-to-slf4j</artifactId>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
 </project>

@@ -8,7 +8,7 @@ package com.wfr.base.framework.common;
  */
 public class BaseResponse<T> {
 
-    private Integer code;
+    private int code;
 
     private String message;
 
@@ -16,11 +16,11 @@ public class BaseResponse<T> {
 
     private String traceId;
 
-    public Integer getCode() {
+    public int getCode() {
         return code;
     }
 
-    public void setCode(Integer code) {
+    public void setCode(int code) {
         this.code = code;
     }
 
