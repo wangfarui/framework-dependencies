@@ -8,13 +8,57 @@ package com.wfr.base.framework.common;
  */
 public class BaseResponse<T> {
 
+    /**
+     * 响应编码
+     */
     private int code;
 
+    /**
+     * 响应消息
+     */
     private String message;
 
+    /**
+     * 响应数据
+     */
     private T data;
 
+    /**
+     * 请求链路id
+     */
     private String traceId;
+
+    public BaseResponse() {
+        this(CommonApiCode.SUCCESS);
+    }
+
+    public BaseResponse(ApiCode apiCode) {
+        this.code = apiCode.getCode();
+        this.message = apiCode.getMessage();
+    }
+
+    public BaseResponse(T data) {
+        this();
+        this.data = data;
+    }
+
+    public BaseResponse(int code, String message, T data) {
+        this.code = code;
+        this.message = message;
+        this.data = data;
+    }
+
+    public static BaseResponse<?> success() {
+        return new BaseResponse<>();
+    }
+
+    public static <T> BaseResponse<T> success(T data) {
+        return new BaseResponse<>(data);
+    }
+
+    public static BaseResponse<?> fail() {
+        return new BaseResponse<>(CommonApiCode.SERVER_ERROR);
+    }
 
     public int getCode() {
         return code;
@@ -46,5 +90,15 @@ public class BaseResponse<T> {
 
     public void setTraceId(String traceId) {
         this.traceId = traceId;
+    }
+
+    @Override
+    public String toString() {
+        return "{" +
+                "code=" + code +
+                ", message='" + message + '\'' +
+                ", data=" + data +
+                ", traceId='" + traceId + '\'' +
+                '}';
     }
 }

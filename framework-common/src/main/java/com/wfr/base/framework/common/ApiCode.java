@@ -1,12 +1,12 @@
 package com.wfr.base.framework.common;
 
 /**
- * 异常编码
+ * 接口编码
  *
  * @author wangfarui
  * @since 2022/9/2
  */
-public interface ExceptionCode {
+public interface ApiCode {
 
     int getCode();
 

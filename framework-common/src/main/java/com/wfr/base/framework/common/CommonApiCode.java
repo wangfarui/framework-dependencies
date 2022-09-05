@@ -1,15 +1,15 @@
 package com.wfr.base.framework.common;
 
 /**
- * 公共异常编码
+ * 公共接口编码
  *
  * @author wangfarui
  * @since 2022/9/2
  */
-public enum CommonExceptionCode implements ExceptionCode {
+public enum CommonApiCode implements ApiCode {
 
     CONTINUE(100, "Continue"),
-    OK(200, "成功"),
+    SUCCESS(200, "成功"),
     BAD_REQUEST(400, "错误请求"),
     UNAUTHORIZED(401, "未授权"),
     FORBIDDEN(403, "重定向"),
@@ -25,7 +25,7 @@ public enum CommonExceptionCode implements ExceptionCode {
 
     private final String message;
 
-    CommonExceptionCode(int code, String message) {
+    CommonApiCode(int code, String message) {
         this.code = code;
         this.message = message;
     }

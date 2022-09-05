@@ -7,9 +7,9 @@ package com.wfr.base.framework.common;
  * @author wangfarui
  * @since 2022/9/2
  */
-public class BaseException extends RuntimeException {
+public class BaseException extends RuntimeException implements ApiCode {
 
-    private int code = CommonExceptionCode.SERVER_ERROR.getCode();
+    private int code = CommonApiCode.SERVER_ERROR.getCode();
 
     public BaseException() {
         super();
@@ -27,14 +27,18 @@ public class BaseException extends RuntimeException {
         super(cause);
     }
 
-    public BaseException(ExceptionCode exceptionCode) {
+    public BaseException(ApiCode exceptionCode) {
         super(exceptionCode.getMessage());
         this.code = exceptionCode.getCode();
     }
 
-    public BaseException(ExceptionCode exceptionCode, Throwable cause) {
+    public BaseException(ApiCode exceptionCode, Throwable cause) {
         super(exceptionCode.getMessage(), cause);
         this.code = exceptionCode.getCode();
     }
 
+    @Override
+    public int getCode() {
+        return this.code;
+    }
 }
