@@ -10,36 +10,48 @@ import java.util.List;
  */
 public class PageResponse<T> {
 
-    private int currentPage;
+    /**
+     * 当前页
+     */
+    private long currentPage;
 
-    private int pageSize;
+    /**
+     * 每页数量
+     */
+    private long pageSize;
 
-    private int totalPage;
+    /**
+     * 总数量
+     */
+    private long totalSize;
 
+    /**
+     * 当前页数据
+     */
     private List<T> data;
 
-    public int getCurrentPage() {
+    public long getCurrentPage() {
         return currentPage;
     }
 
-    public void setCurrentPage(int currentPage) {
+    public void setCurrentPage(long currentPage) {
         this.currentPage = currentPage;
     }
 
-    public int getPageSize() {
+    public long getPageSize() {
         return pageSize;
     }
 
-    public void setPageSize(int pageSize) {
+    public void setPageSize(long pageSize) {
         this.pageSize = pageSize;
     }
 
-    public int getTotalPage() {
-        return totalPage;
+    public long getTotalSize() {
+        return totalSize;
     }
 
-    public void setTotalPage(int totalPage) {
-        this.totalPage = totalPage;
+    public void setTotalSize(long totalSize) {
+        this.totalSize = totalSize;
     }
 
     public List<T> getData() {

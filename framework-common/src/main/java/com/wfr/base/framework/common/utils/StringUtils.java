@@ -87,4 +87,28 @@ public abstract class StringUtils {
     public static boolean isNotBlank(CharSequence cs) {
         return !isBlank(cs);
     }
+
+    /**
+     * 字符串是否为空或"null"字符串
+     *
+     * @param cs 字符串
+     * @return true -> 空
+     */
+    public static boolean isNull(CharSequence cs) {
+        boolean empty = isEmpty(cs);
+        if (empty) {
+            return true;
+        }
+        return "null".equals(cs.toString());
+    }
+
+    /**
+     * 字符串是否为非空或非"null"字符串
+     *
+     * @param cs 字符串
+     * @return true -> 非空
+     */
+    public static boolean isNotNull(CharSequence cs) {
+        return !isNull(cs);
+    }
 }

@@ -8,23 +8,29 @@ package com.wfr.base.framework.common;
  */
 public class PageRequest {
 
-    int page = 1;
+    /**
+     * 当前页
+     */
+    private long currentPage = 1;
 
-    int pageSize = 10;
+    /**
+     * 每页数量
+     */
+    private long pageSize = 10;
 
-    public int getPage() {
-        return page;
+    public long getCurrentPage() {
+        return currentPage;
     }
 
-    public void setPage(int page) {
-        this.page = page;
+    public void setCurrentPage(long currentPage) {
+        this.currentPage = currentPage;
     }
 
-    public int getPageSize() {
+    public long getPageSize() {
         return pageSize;
     }
 
-    public void setPageSize(int pageSize) {
+    public void setPageSize(long pageSize) {
         this.pageSize = pageSize;
     }
 }

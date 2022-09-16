@@ -18,5 +18,11 @@
             <artifactId>log4j-to-slf4j</artifactId>
             <scope>compile</scope>
         </dependency>
+
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-extension</artifactId>
+            <optional>true</optional>
+        </dependency>
     </dependencies>
 </project>
