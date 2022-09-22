@@ -61,4 +61,14 @@ public class PageResponse<T> {
     public void setData(List<T> data) {
         this.data = data;
     }
+
+    @Override
+    public String toString() {
+        return "PageResponse{" +
+                "currentPage=" + currentPage +
+                ", pageSize=" + pageSize +
+                ", totalSize=" + totalSize +
+                ", data=" + data +
+                '}';
+    }
 }

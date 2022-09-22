@@ -33,4 +33,12 @@ public class PageRequest {
     public void setPageSize(long pageSize) {
         this.pageSize = pageSize;
     }
+
+    @Override
+    public String toString() {
+        return "PageRequest{" +
+                "currentPage=" + currentPage +
+                ", pageSize=" + pageSize +
+                '}';
+    }
 }
