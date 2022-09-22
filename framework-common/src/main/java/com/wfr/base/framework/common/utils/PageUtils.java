@@ -37,6 +37,6 @@ public abstract class PageUtils {
      * @return MyBatis-Plus 分页对象
      */
     public static <T> IPage<T> toPage(PageRequest pageRequest) {
-        return new Page<>(pageRequest.getCurrentPage(), pageRequest.getCurrentPage());
+        return new Page<>(pageRequest.getCurrentPage(), pageRequest.getPageSize());
     }
 }
