@@ -48,7 +48,7 @@ public class BaseResponse<T> {
         this.data = data;
     }
 
-    public static BaseResponse<?> success() {
+    public static <T> BaseResponse<T> success() {
         return new BaseResponse<>();
     }
 
@@ -56,7 +56,7 @@ public class BaseResponse<T> {
         return new BaseResponse<>(data);
     }
 
-    public static BaseResponse<?> fail() {
+    public static <T> BaseResponse<T> fail() {
         return new BaseResponse<>(CommonApiCode.SERVER_ERROR);
     }
 
