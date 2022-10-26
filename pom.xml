@@ -21,12 +21,11 @@
         <java.version>1.8</java.version>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
+        <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <spring.version>5.2.2.RELEASE</spring.version>
         <spring-boot.version>2.2.2.RELEASE</spring-boot.version>
-
-        <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
 
         <lombok.version>1.18.22</lombok.version>
         <mybatis.version>3.5.10</mybatis.version>
@@ -36,10 +35,18 @@
         <orika.version>1.5.4</orika.version>
         <hutool.version>5.8.5</hutool.version>
         <freemarker.version>2.3.31</freemarker.version>
+        <druid.version>1.2.13</druid.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+            <!-- internal framework -->
+            <dependency>
+                <groupId>com.wfr.base</groupId>
+                <artifactId>framework-common</artifactId>
+                <version>${base-framework.version}</version>
+            </dependency>
+
             <!-- spring boot -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
@@ -133,11 +140,16 @@
                 <version>${hutool.version}</version>
             </dependency>
 
-            <!-- internal framework -->
+            <!-- druid -->
             <dependency>
-                <groupId>com.wfr.base</groupId>
-                <artifactId>framework-common</artifactId>
-                <version>${base-framework.version}</version>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${druid.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
