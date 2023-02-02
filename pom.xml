@@ -26,6 +26,8 @@
 
         <spring.version>5.2.2.RELEASE</spring.version>
         <spring-boot.version>2.2.2.RELEASE</spring-boot.version>
+        <spring-cloud.version>Hoxton.SR1</spring-cloud.version>
+        <spring-cloud-alibaba.version>2.2.10-RC1</spring-cloud-alibaba.version>
 
         <lombok.version>1.18.22</lombok.version>
         <mybatis.version>3.5.10</mybatis.version>
@@ -50,6 +52,13 @@
                 <version>${base-framework.version}</version>
             </dependency>
 
+            <!-- spring framework -->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+
             <!-- spring boot -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
@@ -59,11 +68,20 @@
                 <scope>import</scope>
             </dependency>
 
-            <!-- spring framework -->
+            <!-- spring cloud -->
             <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-context</artifactId>
-                <version>${spring.version}</version>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring-cloud-alibaba.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
 
             <!-- lombok -->
