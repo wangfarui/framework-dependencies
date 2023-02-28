@@ -11,6 +11,13 @@
     <version>1.0.0</version>
     <description>内部项目所依赖的框架版本</description>
 
+    <contributors>
+        <contributor>
+            <name>Wray</name>
+            <email>wray20156294@gmail.com</email>
+        </contributor>
+    </contributors>
+
     <modules>
         <module>framework-common</module>
     </modules>
